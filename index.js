@@ -16,6 +16,8 @@
       })
   )
 
+  const squareCheckbox = $('#square-checkbox')
+
   const disable = () => {
     $('label').addClass('disabled')
     $('input, button').prop('disabled', true)
@@ -62,18 +64,26 @@
       }
 
       const afterImg = await lib.loadImage(afterSrc)
-      const size = Math.max(afterImg.naturalWidth, afterImg.naturalHeight)
 
-      cv.attr({
-        width: size,
-        height: size
-      })
+      if (squareCheckbox.prop('checked')) {
+        const size = Math.max(afterImg.naturalWidth, afterImg.naturalHeight)
 
-      ctx.drawImage(
-        afterImg,
-        (size - afterImg.naturalWidth) / 2,
-        (size - afterImg.naturalHeight) / 2
-      )
+        cv.attr({
+          width: size,
+          height: size
+        })
+        ctx.drawImage(
+          afterImg,
+          (size - afterImg.naturalWidth) / 2,
+          (size - afterImg.naturalHeight) / 2
+        )
+      } else {
+        cv.attr({
+          width: afterImg.naturalWidth,
+          height: afterImg.naturalHeight
+        })
+        ctx.drawImage(afterImg, 0, 0)
+      }
 
       enable()
     })
