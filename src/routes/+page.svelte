@@ -150,7 +150,9 @@
         </div>
       </div>
       <div class="canvas-container">
-        <canvas bind:this={cv} width={img.width} height={img.height} />
+        {#if preview}
+          <canvas bind:this={cv} width={img.width} height={img.height} />
+        {/if}
         <img src={img.src} alt="" />
       </div>
     </div>

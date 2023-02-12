@@ -1,7 +1,6 @@
 <script>
   let title = "画像の余白を削除";
-  let description =
-    "これは、画像の余白を自動的にトリミングする Web アプリケーションです。";
+  let description = "画像の余白を自動的にトリミングするツールです。";
 </script>
 
 <svelte:head>
