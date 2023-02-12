@@ -1,6 +1,15 @@
 {
   "cSpell.words": [
-    "referrerpolicy"
+    "yudachi",
+    "yudachix"
   ],
-  "editor.tabSize": 2
+  "cSpell.ignorePaths": [
+    "pnpm-lock.yaml",
+    "node_modules",
+    ".git/objects",
+    ".vscode",
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  }
 }

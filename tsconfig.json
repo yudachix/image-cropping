@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./",
+    "paths": {
+      "~/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    ".svelte-kit/ambient.d.ts",
+    "svelte.config.js",
+    "vite.config.ts",
+    "src/**/*.ts",
+    "src/**/*.svelte"
+  ]
+}
